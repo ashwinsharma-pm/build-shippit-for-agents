@@ -603,6 +603,9 @@
   .bs-ex__ship { display: flex; gap: 12px; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border-soft); }
   .bs-ex__arr { font-family: var(--font-data); font-weight: 700; font-size: 15px; flex: none; }
   .bs-ex__ship p { margin: 0; font-size: 16px; line-height: 1.55; }
+  /* proof image — uniform letterbox frame, no crop across mixed aspect ratios */
+  .bs-ex__media { margin: 22px 0 0; border: 1px solid var(--border); background: var(--bg-inset); height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .bs-ex__media img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
 
   /* shifts (labeled contrast rows) */
   .bs-shifts { margin: 32px 0 0; }
@@ -651,6 +654,7 @@
     .bs-cell:nth-child(-n+3) { border-top: 1px solid var(--border); }
     .bs-cell:first-child { border-top: 0; }
     .bs-def, .bs-idea { grid-template-columns: 1fr; gap: 6px; }
+    .bs-ex__media { height: 220px; }
     .bs-close { padding: 48px 28px; margin-left: -32px; margin-right: -32px; }
   }
 </style>
@@ -816,18 +820,22 @@
           <div class="bs-ex">
             <div class="bs-ex__head"><span class="bs-ex__name">AgentMail</span><span class="bs-ex__tag">Inbox</span></div>
             <p>An email inbox built for an AI agent instead of a person. The agent gets its own address and receives vendor replies, one-time codes, attachments, and threads programmatically.</p>
+            <div class="bs-ex__media"><img src="assets/agentmail.png" alt="AgentMail — email inbox API giving AI agents their own addresses, with a Python snippet creating an inbox and a live inbox address" loading="lazy"></div>
           </div>
           <div class="bs-ex">
             <div class="bs-ex__head"><span class="bs-ex__name">Stripe</span><span class="bs-ex__tag">Wallet · Checkout</span></div>
             <p>A purchasing agent that can actually pay. Stripe's agent tooling issues spend caps, approval rules, shared / virtual payment tokens, and an audit trail — so software can buy software under controls a finance team trusts.</p>
+            <div class="bs-ex__media"><img src="assets/stripe-link.png" alt="Stripe Link agent payment approval — a ShoppingBot requesting to spend $10.00 with a one-time virtual card, time-limited, with Decline and Approve controls" loading="lazy"></div>
           </div>
           <div class="bs-ex">
             <div class="bs-ex__head"><span class="bs-ex__name">Slack</span><span class="bs-ex__tag">"Our API is the UI"</span></div>
             <p>The interface an agent operates is the API itself — not a screen wrapped around it. The capability surface is the product.</p>
+            <div class="bs-ex__media"><img src="assets/salesforce-headless360.png" alt="Marc Benioff announcing Salesforce Headless 360 — entire Salesforce, Agentforce and Slack platforms exposed as APIs, MCP and CLI, with the line 'Our API is the UI'" loading="lazy"></div>
           </div>
           <div class="bs-ex">
             <div class="bs-ex__head"><span class="bs-ex__name">Support agent</span><span class="bs-ex__tag">Executable CX</span></div>
             <p>A user's agent files the ticket itself: attaches logs, states the problem, asks for the refund, follows up, and escalates when ignored. Support becomes a thing one agent does to another, not a form a person fills.</p>
+            <div class="bs-ex__media"><img src="assets/fin-intercom.png" alt="Intercom Fin marketed as the #1 AI Agent for all your customer service, with a live chat resolving a plan-upgrade question end to end" loading="lazy"></div>
           </div>
         </div>
       </section>
